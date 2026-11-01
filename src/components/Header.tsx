@@ -27,9 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ lang, onToggleLang, onOpenQuote 
     { href: '#about', label: t.nav.about },
     { href: '#services', label: t.nav.services },
     { href: '#fleet', label: t.nav.fleet },
-    { href: '#manpower', label: t.nav.manpower },
     { href: '#projects', label: t.nav.projects },
-    { href: '#clients', label: t.nav.clients },
     { href: '#contact', label: t.nav.contact },
   ];
 
