@@ -13,7 +13,10 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenQuote, onExploreFleet })
   const t = translations[lang];
 
   return (
-    <section id="home" className="relative min-h-[92dvh] flex items-center pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-[#0a1e33]">
+    <section
+      id="home"
+      className="relative min-h-[95dvh] flex flex-col justify-center pt-32 sm:pt-36 md:pt-44 lg:pt-48 pb-16 lg:pb-24 overflow-hidden bg-[#0a1e33]"
+    >
       {/* Background with real site imagery + overlay gradients */}
       <div className="absolute inset-0 z-0">
         <img

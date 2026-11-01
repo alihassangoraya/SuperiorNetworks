@@ -88,8 +88,8 @@ export const Header: React.FC<HeaderProps> = ({ lang, onToggleLang, onOpenQuote 
       <nav
         className={`transition-all duration-300 ${
           isScrolled
-            ? 'glass-nav shadow-lg py-2.5 border-b border-slate-200/80'
-            : 'bg-white/95 backdrop-blur-md py-3.5 shadow-sm'
+            ? 'glass-nav shadow-lg py-2 border-b border-slate-200/80'
+            : 'bg-white/95 backdrop-blur-md py-3 shadow-sm border-b border-slate-200/60'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
