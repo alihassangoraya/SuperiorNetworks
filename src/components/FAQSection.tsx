@@ -117,3 +117,4 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ lang }) => {
     </section>
   );
 };
+

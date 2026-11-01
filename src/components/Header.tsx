@@ -95,24 +95,17 @@ export const Header: React.FC<HeaderProps> = ({ lang, onToggleLang, onOpenQuote 
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - Only Image Logo (Full with Arabic & English), Text removed */}
           <a
             href="#home"
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg p-1"
+            className="flex items-center group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg py-0.5"
+            aria-label="Superior Networks Company | شركة سوبيريور نتوركس"
           >
             <img
               src="/assets/branding/logo.png"
-              alt="Superior Networks Company Logo"
-              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              alt="Superior Networks Company - شركة سوبيريور نتوركس"
+              className="h-11 sm:h-12 md:h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
             />
-            <div className="border-s border-slate-200 ps-3 hidden sm:block">
-              <div className="font-extrabold text-sm sm:text-base leading-tight text-[#0d2b45] tracking-tight">
-                SUPERIOR NETWORKS
-              </div>
-              <div className="text-xs text-amber-600 font-semibold">
-                شركة سوبيريور نتوركس
-              </div>
-            </div>
           </a>
 
           {/* Desktop Navigation Links */}
@@ -185,20 +178,15 @@ export const Header: React.FC<HeaderProps> = ({ lang, onToggleLang, onOpenQuote 
           >
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
-                <div className="flex items-center gap-2">
-                  <img
-                    src="/assets/branding/logo.png"
-                    alt="Logo"
-                    className="h-9 w-auto"
-                  />
-                  <div>
-                    <p className="font-bold text-xs text-[#0d2b45]">SUPERIOR NETWORKS</p>
-                    <p className="text-[10px] text-amber-600">شركة سوبيريور نتوركس</p>
-                  </div>
-                </div>
+                <img
+                  src="/assets/branding/logo.png"
+                  alt="Superior Networks Company"
+                  className="h-10 w-auto object-contain"
+                />
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-1.5 text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-100"
+                  className="p-1.5 text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-100 cursor-pointer"
+                  aria-label="Close menu"
                 >
                   <X className="w-5 h-5" />
                 </button>
