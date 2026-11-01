@@ -176,3 +176,4 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
     </footer>
   );
 };
+

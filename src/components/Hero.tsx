@@ -18,7 +18,8 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenQuote, onExploreFleet })
       <div className="absolute inset-0 z-0">
         <img
           src="/assets/services/hero-excavator.jpg"
-          alt="Heavy Equipment on site"
+          alt="Superior Networks Heavy Equipment Komatsu Excavator on site in Saudi Arabia"
+          fetchPriority="high"
           className="w-full h-full object-cover object-center opacity-30 scale-105 transform motion-safe:animate-pulse-subtle"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1e33] via-[#0a1e33]/90 to-[#0a1e33]/70"></div>
@@ -239,3 +240,4 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenQuote, onExploreFleet })
     </section>
   );
 };
+

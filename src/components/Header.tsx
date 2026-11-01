@@ -259,3 +259,4 @@ export const Header: React.FC<HeaderProps> = ({ lang, onToggleLang, onOpenQuote 
     </header>
   );
 };
+

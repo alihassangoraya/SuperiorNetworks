@@ -56,3 +56,4 @@ export interface ClientPartner {
   logo: string;
   featured?: boolean;
 }
+

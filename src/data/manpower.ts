@@ -20,3 +20,4 @@ export const manpowerData: ManpowerItem[] = [
   { roleEn: "Transport & Logistics Drivers", roleAr: "سائقو شاحنات نقل ثقيل ومعدات", count: 20, category: "general" },
   { roleEn: "Skilled Field Laborers & Helpers", roleAr: "عمالة مدربة ومساعدة لأعمال التمديد والحفر", count: 24, category: "general" },
 ];
+

@@ -409,3 +409,4 @@ export const fleetData: FleetItem[] = [
     descriptionAr: "مختبر متنقل مكيف ومجهز بأحدث أجهزة لحام الألياف الضوئية (Fujikura) وأجهزة فحص الانعكاس OTDR وقياس الفقد.",
   },
 ];
+

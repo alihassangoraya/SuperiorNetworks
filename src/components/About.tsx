@@ -188,3 +188,4 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
     </section>
   );
 };
+

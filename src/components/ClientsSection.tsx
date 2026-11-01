@@ -104,3 +104,4 @@ export const ClientsSection: React.FC<ClientsSectionProps> = ({ lang }) => {
     </section>
   );
 };
+

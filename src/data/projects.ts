@@ -189,3 +189,4 @@ export const projectsData: ProjectItem[] = [
     descriptionAr: "إجراءات سلامة صارمة ومراقبة ميدانية بالرايات التحذيرية لضمان أمان العاملين والمعدات.",
   },
 ];
+

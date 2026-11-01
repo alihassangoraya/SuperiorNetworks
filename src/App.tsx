@@ -8,6 +8,7 @@ import { FleetSection } from './components/FleetSection';
 import { ManpowerSection } from './components/ManpowerSection';
 import { GallerySection } from './components/GallerySection';
 import { ClientsSection } from './components/ClientsSection';
+import { FAQSection } from './components/FAQSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { MobileQuickBar } from './components/MobileQuickBar';
@@ -20,9 +21,29 @@ export const App: React.FC = () => {
   const [selectedEquipment, setSelectedEquipment] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    // Update HTML dir and lang attributes
+    // Update HTML dir, lang, title and description dynamically for SEO & localization
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.lang = lang;
+
+    if (lang === 'ar') {
+      document.title = "شركة سوبيريور نتوركس | مقاولات عامة وأسطول معدات ثقيلة وألياف ضوئية - الرياض، المملكة العربية السعودية";
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          'شركة سوبيريور نتوركس للمقاولات العامة في الرياض - حلول متكاملة لأسطول المعدات الثقيلة، أعمال الترنش والحفر، تمديد ولحام الألياف الضوئية، وأعمال الأسفلت والبنية التحتية مواكبة لرؤية المملكة 2030.'
+        );
+      }
+    } else {
+      document.title = "Superior Networks Company | General Contracting & Heavy Equipment Fleet - Riyadh, Saudi Arabia";
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          'Superior Networks Company (شركة سوبيريور نتوركس) is a leading Saudi general contracting company based in Riyadh. Specializing in heavy machinery fleet rental (CAT D9, excavators), trenching, optical fiber splicing, asphalt paving, and civil infrastructure aligned with Saudi Vision 2030.'
+        );
+      }
+    }
   }, [lang]);
 
   const toggleLanguage = () => {
@@ -93,6 +114,9 @@ export const App: React.FC = () => {
         {/* Clients & Strategic Partners */}
         <ClientsSection lang={lang} />
 
+        {/* SEO FAQ Section */}
+        <FAQSection lang={lang} />
+
         {/* Contact Us, RFQ Form & Google Map */}
         <ContactSection
           lang={lang}
@@ -124,3 +148,4 @@ export const App: React.FC = () => {
 };
 
 export default App;
+

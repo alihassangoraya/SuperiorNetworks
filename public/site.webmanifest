@@ -1,0 +1,21 @@
+{
+  "name": "Superior Networks Company | شركة سوبيريور نتوركس",
+  "short_name": "Superior Networks",
+  "description": "General Contracting Company, Heavy Machinery Fleet, Optical Fiber & Infrastructure in Riyadh, Saudi Arabia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1e33",
+  "theme_color": "#0d2b45",
+  "icons": [
+    {
+      "src": "/assets/branding/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/branding/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

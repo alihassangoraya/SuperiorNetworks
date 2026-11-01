@@ -216,3 +216,4 @@ export const ManpowerSection: React.FC<ManpowerSectionProps> = ({ lang, onOpenQu
     </section>
   );
 };
+

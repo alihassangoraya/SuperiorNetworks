@@ -56,3 +56,4 @@ export const clientsData: ClientPartner[] = [
     featured: true,
   },
 ];
+

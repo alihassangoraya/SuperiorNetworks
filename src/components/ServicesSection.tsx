@@ -244,3 +244,4 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang, onSelect
     </section>
   );
 };
+

@@ -271,3 +271,4 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ lang, onSelectEquipm
     </section>
   );
 };
+

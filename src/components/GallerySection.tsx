@@ -201,3 +201,4 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ lang }) => {
     </section>
   );
 };
+

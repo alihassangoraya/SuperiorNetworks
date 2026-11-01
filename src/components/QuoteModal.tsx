@@ -260,3 +260,4 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
     </div>
   );
 };
+
