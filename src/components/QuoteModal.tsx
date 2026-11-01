@@ -3,6 +3,7 @@ import { Language } from '../types';
 import { translations } from '../data/translations';
 import { servicesData } from '../data/services';
 import { fleetData } from '../data/fleet';
+import { submitContactForm, generateWhatsAppLink } from '../services/contactService';
 import { X, Send, MessageCircle, CheckCircle2, Sparkles } from 'lucide-react';
 
 interface QuoteModalProps {
@@ -49,26 +50,22 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      await submitContactForm(formData);
+    } catch (err) {
+      console.error(err);
+    } finally {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 600);
+    }
   };
 
   const handleSendWhatsApp = () => {
-    const text = encodeURIComponent(
-      `*Quotation Request - Superior Networks KSA*\n` +
-      `*Name:* ${formData.name || 'Not provided'}\n` +
-      `*Company:* ${formData.company || 'Not provided'}\n` +
-      `*Phone:* ${formData.phone || 'Not provided'}\n` +
-      `*Service:* ${formData.service || 'General Contracting'}\n` +
-      (formData.equipment ? `*Requested Equipment:* ${formData.equipment}\n` : '') +
-      `*Project Details:* ${formData.message || 'Please provide quotation.'}`
-    );
-    window.open(`https://wa.me/966579421490?text=${text}`, '_blank');
+    const url = generateWhatsAppLink(formData);
+    window.open(url, '_blank');
   };
 
   return (

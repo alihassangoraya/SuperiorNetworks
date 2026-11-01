@@ -3,6 +3,7 @@ import { Language } from '../types';
 import { translations } from '../data/translations';
 import { servicesData } from '../data/services';
 import { fleetData } from '../data/fleet';
+import { submitContactForm, generateWhatsAppLink } from '../services/contactService';
 import {
   Phone,
   Mail,
@@ -54,28 +55,23 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     }
   }, [preselectedEquipment]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate reliable dispatch
-    setTimeout(() => {
+    try {
+      await submitContactForm(formData);
+    } catch (err) {
+      console.error(err);
+    } finally {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 600);
+    }
   };
 
   const handleSendWhatsApp = () => {
-    const text = encodeURIComponent(
-      `*New Inquiry - Superior Networks KSA*\n` +
-      `*Name:* ${formData.name || 'Not provided'}\n` +
-      `*Company:* ${formData.company || 'Not provided'}\n` +
-      `*Phone:* ${formData.phone || 'Not provided'}\n` +
-      `*Service:* ${formData.service || 'General Inquiry'}\n` +
-      (formData.equipment ? `*Equipment:* ${formData.equipment}\n` : '') +
-      `*Details:* ${formData.message || 'Please provide quotation and machinery availability.'}`
-    );
-    window.open(`https://wa.me/966579421490?text=${text}`, '_blank');
+    const url = generateWhatsAppLink(formData);
+    window.open(url, '_blank');
   };
 
   return (
