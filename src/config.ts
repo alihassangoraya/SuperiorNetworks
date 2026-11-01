@@ -10,7 +10,5 @@ export const siteConfig = {
   addressAr: "طريق مكة المكرمة، الرياض، المملكة العربية السعودية",
   
   // Web3Forms Access Key for contact form email delivery
-  // Get a free key in 5 seconds at https://web3forms.com (just enter your email)
-  // Or override via environment variable VITE_WEB3FORMS_ACCESS_KEY
-  web3FormsKey: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE",
+  web3FormsKey: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "4b5887d6-14bd-4928-8709-e6bf8a51457f",
 };

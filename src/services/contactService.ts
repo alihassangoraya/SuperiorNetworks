@@ -31,7 +31,6 @@ export async function submitContactForm(data: ContactFormData): Promise<Submissi
           access_key: accessKey,
           subject: `New RFQ from ${data.name} - ${data.company || 'Website Lead'}`,
           from_name: "Superior Networks Website",
-          to_email: siteConfig.email,
           name: data.name,
           company: data.company || "N/A",
           phone: data.phone,
@@ -85,3 +84,4 @@ export function generateWhatsAppLink(data: ContactFormData): string {
   const encoded = encodeURIComponent(lines.join('\n'));
   return `https://wa.me/966579421490?text=${encoded}`;
 }
+
